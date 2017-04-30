@@ -1,0 +1,28 @@
+<div id="wrapper" class="mat-app-background">
+  <!-- Header -->
+  <header>
+    {{title}}
+  </header>
+  <!-- Header -->
+  <main id="main" role="main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-0">
+            <div class="col-sm-3 ">
+
+              <app-nav></app-nav>
+
+            </div>
+            <main class="col-sm-9 col-xs-offset-0">
+
+              <router-outlet></router-outlet>
+
+            </main>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer>
+  </footer>
+</div>

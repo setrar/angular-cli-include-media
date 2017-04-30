@@ -1,0 +1,41 @@
+@import '../styles.scss';
+@import '~include-media/dist/_include-media.scss';
+
+%body {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(53,53,53,0.4);
+  transition: all 0.3s ease;
+
+
+  background-image: url('/assets/images/bg-body.jpg');
+  background-position-x: 0;
+  background-position-y: 0;
+  //background-repeat: none;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#wrapper {
+  @extend %body;
+
+  overflow:auto;
+  padding: 72px 0 220px;
+  min-height: 100%;
+
+  @include media('<tablet') {
+    padding-bottom: 70px;
+  }
+}
+
+#main {
+  @extend %clearfix;
+
+  @include media('<tablet') {
+    position: relative;
+    overflow: visible;
+  }
+}

@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~include-media/dist/_include-media.scss';
+/* md-material theme */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/* font-awesome fonts and style */
+$fa-font-path: "~font-awesome-sass/assets/fonts/font-awesome/" !default;
+@import "~font-awesome-sass/assets/stylesheets/_font-awesome.scss";
+
+
+$yellow: #fcb000;
+$white: #fff;
+$orange: #fa7f12;
+
+/* Include Media Screen Breakpoints */
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 992px,
+  'xs-widescreen': 1025px,
+  'widescreen': 1200px
+);
+
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+%font {
+  position: absolute;
+  left: 0px;
+  //top: 0;
+  //bottom: 0;
+  //background: $yellow;
+  //color: $white;
+  width: 49px;
+  //text-align: center;
+  font-size: 22px;
+  //line-height: 46px;
+}
+
+/*
+   http://fontawesome.io/cheatsheet/
+ */
+[class^="icon-"] {
+
+  font-family: 'FontAwesome';
+
+  @extend %font;
+
+  @include media('<=xs-phone') {
+    width: 20px;
+    font-size: 20px;
+  }
+
+  @include media('>xs-phone', '<=phone') {
+    width: 40px;
+    font-size: 40px;
+  }
+
+  @include media('>phone', '<=tablet') {
+      width: 40px;
+      font-size: 40px;
+  }
+
+  @include media('>tablet', '<=desktop') {
+    width: 80px;
+    font-size: 80px;
+  }
+
+  @include media('>desktop') {
+    width: 120px;
+    font-size: 120px;
+  }
+
+}
+
+
+
