@@ -15,7 +15,9 @@ $white: #fff;
 $black: #000;
 $orange: #fa7f12;
 
-/* Include Media Screen Breakpoints */
+/*
+ Begin: Include Media Specifics
+*/
 $breakpoints: (
   'xs-phone': 320px,
   'phone': 480px,
@@ -24,6 +26,19 @@ $breakpoints: (
   'xs-widescreen': 1025px,
   'widescreen': 1200px
 );
+
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+) !default;
+/*
+ End: Include Media Specifics
+*/
 
 // clearfix
 %clearfix {
@@ -38,8 +53,8 @@ $breakpoints: (
   position: absolute;
   left: 0px;
   top: 15px;
-  //bottom: 0;
-  //background: $yellow;
+  bottom: 0;
+  background: $yellow;
   //background: $black;
   color: $white;
   //width: 49px;
@@ -78,8 +93,8 @@ $breakpoints: (
   }
 
   @include media('>desktop') {
-    width: 120px;
-    font-size: 120px;
+    width: 100px;
+    font-size: 100px;
   }
 
 }

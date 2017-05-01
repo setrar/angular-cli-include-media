@@ -10,25 +10,44 @@
   background: rgba(53,53,53,0.4);
   transition: all 0.3s ease;
 
-
   background-image: url('/assets/images/bg-body.jpg');
-  background-position-x: 0;
-  background-position-y: 0;
-  //background-repeat: none;
-  -webkit-background-size: cover;
-  background-size: cover;
+  //background-position-x: 0;
+  //background-position-y: 0;
+  background-repeat: no-repeat;
+  //-webkit-background-size: cover;
+  //background-size: cover;
+
+  //overflow:hidden;
+  //min-height: 100%;
+  //padding: 10px 0 20px;
+
 }
 
 #wrapper {
   @extend %body;
 
-  overflow:auto;
-  padding: 72px 0 220px;
-  min-height: 100%;
-
-  @include media('<tablet') {
-    padding-bottom: 70px;
+  @include media('<=xs-phone') {
+    padding: 10px 20px 40px 20px;
   }
+
+  @include media('>xs-phone', '<=phone') {
+  }
+
+  @include media('>phone', '<=tablet') {
+  }
+
+  @include media('>phone', '<=tablet', 'landscape' ) {
+  }
+
+  @include media('>tablet', '<=desktop') {
+  }
+
+  @include media('>desktop', '<=xs-widescreen') {
+  }
+
+  @include media('>xs-widescreen') {
+  }
+
 }
 
 #main {
