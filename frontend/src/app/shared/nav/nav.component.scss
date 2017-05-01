@@ -2,6 +2,10 @@ import '../../styles.scss'
 
 .icon-*:before {}
 
-.icon-navicon:before {
-  content: '\f0c9';
+.icon-tty:before {
+  content: '\f1e4';
+}
+
+.icon-ellipsis-v:before {
+  content: '\f142';
 }

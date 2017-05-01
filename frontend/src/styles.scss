@@ -12,6 +12,7 @@ $fa-font-path: "~font-awesome-sass/assets/fonts/font-awesome/" !default;
 
 $yellow: #fcb000;
 $white: #fff;
+$black: #000;
 $orange: #fa7f12;
 
 /* Include Media Screen Breakpoints */
@@ -36,13 +37,14 @@ $breakpoints: (
 %font {
   position: absolute;
   left: 0px;
-  //top: 0;
+  top: 15px;
   //bottom: 0;
   //background: $yellow;
-  //color: $white;
-  width: 49px;
+  //background: $black;
+  color: $white;
+  //width: 49px;
   //text-align: center;
-  font-size: 22px;
+  //font-size: 22px;
   //line-height: 46px;
 }
 

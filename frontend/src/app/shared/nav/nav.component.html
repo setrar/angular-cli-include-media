@@ -1,15 +1,14 @@
-<button md-icon-button [mdMenuTriggerFor]="menu" >
-  <i class="icon-navicon"></i>
+<div class="col-sm-3 navbar-inverse">
+  <button md-icon-button [mdMenuTriggerFor]="menu">
+  <i class="icon-ellipsis-v"></i>
 </button>
-<md-menu #menu="mdMenu">
+
+</div>
+
+<md-menu #menu="mdMenu" yPosition="above">
   <button md-menu-item>
-    <i class="icon-navicon"></i>
-    <span>
-      Redial  TOTOTOTOTOTOTOTOTOTOT
-    </span>
-
-
-
+    <i class="icon-tty"></i>
+    <span>Redial</span>
   </button>
   <button md-menu-item disabled>
     <md-icon>voicemail</md-icon>
